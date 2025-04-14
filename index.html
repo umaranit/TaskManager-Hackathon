@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Task Manager</h1>
+        
+        <div id="taskStats">
+            <p>Total Tasks: <span id="totalTasks">0</span></p>
+            <p>Completed Tasks: <span id="completedTasks">0</span></p>
+        </div>
+
+        <input type="text" id="searchInput" placeholder="Search tasks...">
+
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Enter a new task" required>
+            <select id="taskPriority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <input type="date" id="taskDueDate" required>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div id="sortOptions">
+            <button id="sortByPriority">Sort by Priority</button>
+            <button id="sortByDueDate">Sort by Due Date</button>
+        </div>
+
+        <button id="clearAllTasks">Clear All Tasks</button>
+
+        <ul id="taskList"></ul>
+    </div>
+</body>
+</html>
